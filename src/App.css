@@ -107,3 +107,31 @@ h1, h2, h3 {
 .expense-form input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.app {
+  margin-top: 100px; 
+}
+
+.welcomeHeader {
+  margin-top: 50px;
+}
+
+.logout-button {
+  background-color: #ff5733;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c14e1b;
+}
