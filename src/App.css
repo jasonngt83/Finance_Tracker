@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -33,87 +33,23 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.app {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-h1, h2, h3 {
-  text-align: center;
-}
-
-.form {
-  margin-bottom: 20px;
-}
-
-.budget-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.budget-box {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 45%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.budget-box .budget-header {
-  background-color: #e0f7fa;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-.budget-box h4 {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #001a69;
+  color: #0a37bd;
+  font-weight: bold;
   margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-.expenses ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.expenses li {
-  margin: 5px 0;
-}
-
-.expense-form input {
+.header {
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.expense-form input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
-
-.expense-form input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-header {
-  width: 100%;
-  background-color: #333;
+  background-color: #5682fa;
   color: white;
   padding: 10px;
   text-align: center;
+  position: relative;
 }
 
 .app {
@@ -124,14 +60,198 @@ header {
   margin-top: 50px;
 }
 
-.logout-button {
-  background-color: #ff5733;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
+h1, h2, h3 {
+  text-align: left;  
+  font-family: 'Arial', sans-serif; 
+  font-weight: bold; 
+  margin-bottom: 1.5rem; 
+  line-height: 0.5cm  
 }
 
-.logout-button:hover {
-  background-color: #c14e1b;
+h1 {
+  color: #75bbfc;
+  margin-top: 20px;
+  font-size: 3rem; 
+  letter-spacing: 2px; 
 }
+
+h2 {
+  color: #ffffff;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px; 
+}
+
+h3 {
+  color:#2563eb;
+  font-weight: bold;
+  font-size: 2rem; 
+  letter-spacing: 0.3px; 
+  font-weight: normal; 
+}
+
+.card {
+  padding: 3rem;
+  border-radius: 12px;
+  color: #240abb;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(4, 4, 209, 0.2);
+}
+
+
+.read-the-docs:hover {
+  color: #1d4ed8;
+}
+
+/* App Wrapper */
+.app {
+  margin-top: 100px;
+  padding: 100px;
+  background-color: #eff2f5;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Form Styling */
+.form, .expense-form {
+  margin-bottom: 20px;
+  background-color: #ced3e1;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(15, 143, 255, 0.2);
+}
+
+/* Input Fields */
+.expense-form input {
+  width: 80%;
+  padding: 20px;
+  margin: 10px 10;
+  border: 1px solid #002050;
+  border-radius: 6px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 12px rgba(19, 110, 255, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.expense-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.expense-form input[type="submit"] {
+  background-color: #0f3581;
+  color: white;
+  border:rgba(4, 4, 209, 0.2)
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expense-form input[type="submit"]:hover {
+  background-color: #156beb;
+}
+
+/* Budget Container */
+.budget-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content:center;
+}
+
+/* Budget Box */
+.budget-box {
+  background-color: #fff;
+  border: 1px solid #0f3581;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(4, 4, 209, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.budget-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(4, 4, 209, 0.2);
+}
+
+/* Budget Header */
+.budget-box .budget-header {
+  background-color: #bcdef5;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(4, 4, 209, 0.2);
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.form input[type="submit"] {
+  background-color: #0f3581; /* Green color */
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #0f3581; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+/* Expenses List */
+.expenses ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: large;
+}
+
+.expenses li {
+  background-color: rgb(188, 222, 245);
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f;
+  }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .budget-box {
+    width: 100%;
+  }
+
+  .app {
+    padding: 10px;
+  }
+
+  .form, .expense-form {
+    padding: 15px;
+  }
+
+}  

@@ -1,4 +1,4 @@
-# Project 2: Finance Tracker -  Budget Buddy 
+# Project 2: Finance Tracker -  Budget Buddies
 
  This Finance Tracker was designed to help monitor your expenses and budget your finances. 
 
