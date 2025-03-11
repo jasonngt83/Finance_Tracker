@@ -69,17 +69,19 @@ function App() {
     setBudgets([]);
   };
 
+
   return (
     <>
-      <div className="welcomeHeader">
-        {/* Any additional properties or content you want to add */}
-      </div>
 
-      <header style={headerStyle}>
+<header style={headerStyle}>
         <h1>Budget Buddies</h1>
         <h2>Where your Pennies find their Pals!</h2>
         <button onClick={handleLogout} className="logout-button">Log Out</button>
       </header>
+
+      <div className="welcomeHeader">
+        {/* Any additional properties or content you want to add */}
+      </div>
 
       <div className="app">
         <form onSubmit={handleBudgetSubmit} className="form">
@@ -184,6 +186,10 @@ const headerStyle = {
   padding: '10px',
   textAlign: 'center',
   width: '100%',
+  position: 'absolute',
+  right: 0, 
+  left: 0, 
+  height: '80px',
   };
 
 export default App;
