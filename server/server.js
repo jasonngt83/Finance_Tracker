@@ -1,10 +1,13 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const db = require("./src/models");
-const authRoutes = require("./routes/auth");
+import dotenv from 'dotenv';
+
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+//import db from "./src/models";
+import authRoutes from "./routes/auth.js";
 import sequelize from "./db/connection.js";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());

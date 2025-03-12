@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import CurrencyConverter from './CurrencyConverter';
+
 
 function App() {
   const [budgetName, setBudgetName] = useState('');
@@ -68,6 +70,8 @@ function App() {
     <div className="app">
       <h1>Budget Buddies</h1>
       <h2>Where your Pennies find their Pals!</h2>
+
+      <div><CurrencyConverter/></div>
 
       <form onSubmit={handleBudgetSubmit} className="form">
         <h3>Create Budget</h3>
