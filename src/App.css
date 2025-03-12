@@ -2,6 +2,8 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
+  font-size: larger;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -37,10 +39,10 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #001a69;
   color: #0a37bd;
-  font-weight: bold;
+  font-weight: 400;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .header {
@@ -63,7 +65,7 @@ body {
 h1, h2, h3 {
   text-align: left;  
   font-family: 'Arial', sans-serif; 
-  font-weight: bold; 
+  font-weight: 600; 
   margin-bottom: 1.5rem; 
   line-height: 0.5cm  
 }
@@ -76,6 +78,7 @@ h1 {
 }
 
 h2 {
+
   color: #ffffff;
   font-family: cursive;
   font-weight: bold;
@@ -95,6 +98,7 @@ h3 {
   padding: 3rem;
   border-radius: 12px;
   color: #240abb;
+  font-weight: bold;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(4, 4, 209, 0.2);
 }
@@ -107,17 +111,19 @@ h3 {
 /* App Wrapper */
 .app {
   margin-top: 100px;
-  padding: 100px;
+  padding: 35px;
   background-color: #eff2f5;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 2500px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  position: relative;
 }
 
 /* Form Styling */
 .form, .expense-form {
   margin-bottom: 20px;
   background-color: #ced3e1;
-  padding: 20px;
+  padding: 40px;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(15, 143, 255, 0.2);
 }
@@ -126,7 +132,7 @@ h3 {
 .expense-form input {
   width: 80%;
   padding: 20px;
-  margin: 10px 10;
+  margin: 10px 10px;
   border: 1px solid #002050;
   border-radius: 6px;
   background-color: white;
@@ -143,7 +149,7 @@ h3 {
 .expense-form input[type="submit"] {
   background-color: #0f3581;
   color: white;
-  border:rgba(4, 4, 209, 0.2)
+  border:1px rgba(4, 4, 209, 0.2);
   padding: 14px;
   border-radius: 8px;
   box-shadow: 0 4px 12px;
@@ -167,6 +173,7 @@ h3 {
 .budget-box {
   background-color: #fff;
   border: 1px solid #0f3581;
+  display: 788;
   padding: 20px;
   width: 100%;
   max-width: 500px;
@@ -192,7 +199,7 @@ h3 {
 }
 
 .form input[type="submit"] {
-  background-color: #0f3581; /* Green color */
+  background-color: #0f3581; 
   color: white;
   border: none;
   padding: 14px;
@@ -203,7 +210,7 @@ h3 {
 }
 
 .form input[type="submit"]:hover {
-  background-color: #0f3581; /* Darker shade for hover */
+  background-color: #0f3581; 
   transform: translateY(-2px);
 }
 
@@ -241,17 +248,15 @@ h3 {
   }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  .budget-box {
-    width: 100%;
-  }
 
+@media (max-width: 1024px) {
   .app {
-    padding: 10px;
+    padding: 20px;
   }
+}
 
-  .form, .expense-form {
-    padding: 15px;
+@media (max-width: 768px) {
+  .budget-container {
+    grid-template-columns: 1fr;
   }
-
-}  
+}
