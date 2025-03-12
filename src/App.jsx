@@ -179,23 +179,13 @@ function App() {
   );
 }
 
+
 const headerStyle = {
-  color: 'white',
   padding: '10px',
   textAlign: 'center',
   width: '100%',
-  position: 'absolute',
   right: 0, 
   left: 0, 
-  height: '80px',
   };
 
-  const logoutButtonStyle = {
-    padding: '8px 16px',
-    backgroundColor: '#f44336',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-  };
 export default App;
