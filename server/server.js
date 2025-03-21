@@ -11,6 +11,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth.js");
 const sequelize = require("./db/connection.js");
 //const bodyParser = require("body-parser");
+const path = require("path");
 
 const { User } = require("./models/index.js");
 
@@ -28,6 +29,10 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+// middleware for serving static file in the client
+
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("/", (req, res) => {
   res.send("Welcome to Budget Buddy API");});
@@ -140,6 +145,11 @@ function verifyToken(req, res, next) {
 
 // Start Server
 // app.listen(5000, () => console.log("Server running on port 5000"));
+
+// serve the index file in the client folder
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
+})
 
 
 sequelize.sync().then(() => {
