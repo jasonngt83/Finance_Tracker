@@ -13,7 +13,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/register", user);
+      await axios.post("/register", user);
       setMessage("Registration successful! Redirecting...");
       setTimeout(() => navigate("/login"), 2000);
     } catch (error) {

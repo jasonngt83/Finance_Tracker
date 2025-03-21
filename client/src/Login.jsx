@@ -14,7 +14,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/login", user);
+      const res = await axios.post("/login", user);
       console.log("Token received:", res.data.token);
       setToken(res.data.token);
       setMessage("Login successful! Redirecting...");
