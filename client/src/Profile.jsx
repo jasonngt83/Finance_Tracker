@@ -21,7 +21,7 @@ export default function Profile() {
         console.log("in profile");
         console.log(token);
 
-        const res = await axios.get("http://localhost:3001/profile", {
+        const res = await axios.get("/profile", {
           headers: { Authorization: `${token}` },
         });
 
